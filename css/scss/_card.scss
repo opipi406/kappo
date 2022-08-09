@@ -1,0 +1,83 @@
+/*-----------------------------------------------------
+  Card
+------------------------------------------------------*/
+@import "media-query";
+@import "colors";
+// カード全体の高さ
+$card__root-height: 350px;
+// カード全体の横幅
+$card__root-width: 300px;
+// カード画像の高さ
+$card__image-height: 50%;
+// カード間の横余白
+$card__column-gap: 20px;
+// カード間の縦余白
+$card__row-gap: 20px;
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  // width: $card__root-width;
+  height: $card__root-height;
+  margin-right: $card__column-gap;
+  margin-bottom: $card__row-gap;
+
+  background-color: bg-palette(main, light);
+  box-shadow: 1px 1px 5px bg-palette(main, dark);
+
+  @include mq-down(sm) {
+    width: 100%;
+    margin-right: 0;
+  }
+  @include mq-between(sm, md) {
+    width: calc(100% / 2 - #{$card__column-gap} / 2);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include mq-up(md) {
+    width: calc(100% / 3 - (#{$card__column-gap} * 2) / 3);
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: $card__image-height;
+
+    object-fit: cover;
+  }
+  &__title {
+    font-size: 1.4rem;
+    height: 3rem;
+
+    overflow: hidden;
+
+    margin: 8px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    color: text-palette(primary);
+  }
+
+  &__text {
+    font-size: 1rem;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+
+    margin: 8px;
+
+    color: text-palette(main, light);
+
+    -webkit-line-clamp: 5;
+  }
+}

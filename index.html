@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>テンプレートスタイル Demo</title>
+
+  <!-- <link rel="shortcut icon" href="">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico"> -->
+
+  <meta name="msapplication-TileImage" content="/images/favicon.ico">
+  <meta name="description" content="ダミーテキスト">
+  <meta property="og:title" content="ダミーテキスト" />
+  <meta property="og:description" content="ダミーテキスト" />
+  <meta property="og:image" content="ダミーテキスト" />
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/destyle.min.css">
+  <link rel="stylesheet" media="all" href="css/style.css">
+
+  <!-- JavaScript -->
+  <script src="js/burger-menu.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header">
+      <h1 class="header__title"><a href="#">Tamplate Style Demo</a></h1>
+      <span class="spacer"></span>
+      <nav class="header__nav">
+        <!-- Global Menu -->
+        <div class="menu-container">
+          <ul class="menu">
+            <li class="menu__item"><a href="#">Home</a></li>
+            <li class="menu__item"><a href="#button-sample">Button</a></li>
+            <li class="menu__item"><a href="#text-sample">Text</a></li>
+            <li class="menu__item"><a href="#card-content">Card</a></li>
+          </ul>
+        </div>
+        <!-- /Global Menu -->
+      </nav>
+      <button class="burger-menu">
+        <div class="burger-menu__btn">
+          <div class="burger-menu-line"></div>
+        </div>
+        <nav class="burger-menu__nav">
+          <!-- Global Menu (ハンバーガーメニュー) -->
+          <div class="menu-container">
+            <ul class="menu">
+              <li class="menu__item"><a href="#">Home</a></li>
+              <li class="menu__item"><a href="#button-sample">Button</a></li>
+              <li class="menu__item"><a href="#text-sample">Text</a></li>
+              <li class="menu__item"><a href="#card-content">Card</a></li>
+            </ul>
+          </div>
+          <!-- /Global Menu (ハンバーガーメニュー) -->
+        </nav>
+        <div class="burger-overlay"></div>
+      </button>
+    </div>
+  </header>
+  <!-- /Header -->
+
+  <div class="container">
+
+    <!-- Button Sample -->
+    <div class="panel panel-flex" id="button-sample">
+      <h2 class="panel__heading">Button Sample</h2>
+      <button class="btn btn-main">main</button>
+      <button class="btn btn-primary">primary</button>
+      <button class="btn btn-secondary">secondary</button>
+      <button class="btn btn-success">success</button>
+      <button class="btn btn-info">info</button>
+      <button class="btn btn-warn">warn</button>
+      <button class="btn btn-error">error</button>
+    </div>
+    <!-- /Button Sample -->
+
+    <!-- Text Sample -->
+    <div class="panel" id="text-sample">
+      <h2 class="panel__heading">Text Sample</h2>
+      <p class="text text-main">
+        アリスは川辺でおねえさんのよこにすわって、なんにもすることがないのでとても退屈（たいくつ）しはじめていました。一、二回はおねえさんの読んでいる本をのぞいてみたけれど、そこには絵も会話もないのです。</p>
+      <p class="text text-primary">
+        「絵や会話のない本なんて、なんの役にもたたないじゃないの」とアリスは思いました。そこでアリスは、頭のなかで、ひなぎくのくさりをつくったら楽しいだろうけれど、起きあがってひなぎくをつむのもめんどくさいし、どうしようかと考えていました（といっても、昼間で暑いし、とってもねむくて頭もまわらなかったので、これもたいへんだったのですが）。そこへいきなり、ピンクの目をした白うさぎが近くを走ってきたのです。
+      </p>
+      <p class="text text-secondary">
+        それだけなら、そんなにめずらしいことでもありませんでした。さらにアリスとしては、そのうさぎが「どうしよう！　どうしよう！　ちこくしちゃうぞ！」とつぶやくのを聞いたときも、それがそんなにへんてこだとは思いませんでした。</p>
+      <p class="text text-success">
+        でもそのうさぎがほんとうに、チョッキのポケットから懐中時計（かいちゅうどけい）をとりだしてそれをながめ、そしてまたあわててかけだしたとき、アリスもとびあがりました。というのも、チョッキのポケットなんかがあるうさぎはこれまで見たことがないし、そこからとりだす時計をもっているうさぎなんかも見たことないぞ、というのに急に気がついたからです。そこで、興味（きょうみ）しんしんになったアリスは、うさぎのあとを追っかけて野原をよこぎって、それがしげみの下の、おっきなうさぎの穴にとびこむのを、ぎりぎりのところで見つけました。
+      </p>
+      <p class="text text-info">
+        次のしゅんかんに、アリスもそのあとを追っかけてとびこみました。いったいぜんたいどうやってそこから出ようか、なんてことはちっとも考えなかったのです。うさぎの穴は、しばらくはトンネルみたいにまっすぐつづいて、それからいきなりズドンと下におりていました。それがすごくいきなりで、アリスがとまろうとか思うひまもあればこそ、気がつくとなにやら深い井戸みたいなところを落っこちているところでした。
+      </p>
+      <p class="text text-warn">
+        井戸がとっても深かったのか、それともアリスの落ちかたがゆっくりだったのかもしれません。だってアリスは落ちながら、まわりを見まわして、これからどうなっちゃうんだろうと考えるだけの時間がたっぷりあったからです。まずは下をながめて、どこに向かおうとしているのかを見きわめようとしました。でも暗すぎてなにも見えません。
+      </p>
+      <p class="text text-error">それから井戸の横のかべを見てみました。するとそこは、食器だなと本だなだらけでした。あちこちに、地図や絵がとめ金に引っかけてあります。アリスは通りすがりに、たなの一つからびんを手にとってみました。「マーマレード」というラベルがはってあります。</p>
+    </div>
+    <!-- /Text Sample -->
+
+    <!-- Card Content -->
+    <div class="panel" id="card-content">
+      <h2 class="panel__heading">Card Content</h2>
+
+      <div class="card-list">
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
+        </div>
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
+        </div>
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。これは猫です。あああああああああてすとてすとテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+        </div>
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトルダミータイトルダミータイトルダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
+        </div>
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
+        </div>
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
+        </div>
+        <div class="card">
+          <img class="card__image" src="img/card.jpg">
+          <h2 class="card__title">ダミータイトル</h2>
+          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- /Card Content -->
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="copyright">&copy; opipi. 2022.</p> 
+  </footer>
+  <!-- /Footer -->
+
+</body>
+
+</html>

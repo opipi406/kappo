@@ -1,0 +1,114 @@
+@import "colors";
+@import "media-query";
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+html {
+  background-color: bg-palette(main);
+}
+.spacer {
+  margin: auto;
+}
+
+.container {
+  margin: 0 60px;
+  padding: 40px 12px;
+  @include mq-down(lg) {
+    margin: 0 30px;
+  }
+  @include mq-down(sm) {
+    margin: 0;
+  }
+
+}
+
+.panel {
+  position: relative;
+
+  margin-bottom: 48px;
+  padding: 24px;
+
+  @include mq-down(md) {
+    padding: 24px 16px;
+  }
+  @include mq-down(xs) {
+    padding: 24px 8px;
+  }
+
+  border-radius: 24px;
+  background-color: bg-palette(main, dark);
+  box-shadow: 1px 1px 1px darken(bg-palette(main, dark), 10%);
+
+  &-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 24px;
+  }
+
+  &__heading {
+    font-size: 1.1rem;
+
+    position: absolute;
+    top: -18px;
+    left: 40px;
+
+    padding: 6px 12px;
+
+    border-radius: 8px;
+    background-color: bg-palette(main, dark);
+    box-shadow: 1px 1px 1px darken(bg-palette(main, dark), 10%);
+  }
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+
+  transition: 0.3s;
+  text-align: center;
+
+  color: text-palette(primary);
+  border: 1px solid #9d9d9d;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px #b4b4b4;
+}
+
+// Button Style Loop
+@each $var in "main", "primary", "secondary", "success", "info", "warn", "error" {
+  .btn-#{$var} {
+    background-color: ui-palette($var);
+    &:hover {
+      background-color: ui-palette($var, light);
+    }
+    &:active {
+      background-color: ui-palette($var, dark);
+    }
+  }
+}
+
+.text {
+  margin: 24px 0;
+}
+
+// Text Style Loop
+@each $var in "main", "primary", "secondary", "success", "info", "warn", "error" {
+  .text-#{$var} {
+    color: text-palette($var);
+    &:hover {
+      color: text-palette($var, light);
+    }
+    &:active {
+      color: text-palette($var, dark);
+    }
+  }
+}
+
+@import "header";
+@import "footer";
+@import "burger-menu";
+@import "global-nav";
+@import "card";
