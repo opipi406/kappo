@@ -1,114 +1,198 @@
 @import "colors";
 @import "media-query";
+$section-margin-top: 98px;
 
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 100%;
+
+  line-height: 1.8;
+
+  color: text-palette(main);
 }
 html {
   background-color: bg-palette(main);
 }
+.wrap {
+  overflow: hidden;
+}
 .spacer {
   margin: auto;
 }
-
-.container {
-  margin: 0 60px;
-  padding: 40px 12px;
-  @include mq-down(lg) {
-    margin: 0 30px;
+.sp {
+  @include mq-up(xs) {
+    display: none;
   }
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
   @include mq-down(sm) {
-    margin: 0;
+    flex-direction: column;
   }
 
+  p {
+    max-width: 300px;
+
+    @include mq-down(sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &--rv {
+    flex-direction: row-reverse;
+
+    @include mq-down(sm) {
+      flex-direction: column;
+    }
+  }
 }
 
-.panel {
-  position: relative;
+#desire {
+  padding-top: 98px;
+  padding-bottom: 84px;
 
-  margin-bottom: 48px;
-  padding: 24px;
+  background: url("../img/bg_01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#course {
+  padding-top: 98px;
+  padding-bottom: 84px;
 
-  @include mq-down(md) {
-    padding: 24px 16px;
+  background: url("../img/bg_02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  * {
+    color: text-palette(inverse);
   }
+}
+#access {
+  padding-top: 98px;
+  padding-bottom: 84px;
+
+  background: url("../img/bg_01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0.1px 12px;
+}
+
+/*-----------------------------------------------------
+  見出し
+------------------------------------------------------*/
+.heading {
+  font-size: 1.8rem;
+
+  height: 64px;
+  line-height: 64px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  text-align: center;
+
   @include mq-down(xs) {
-    padding: 24px 8px;
+    font-size: min(1.8rem, 10vw);
   }
 
-  border-radius: 24px;
-  background-color: bg-palette(main, dark);
-  box-shadow: 1px 1px 1px darken(bg-palette(main, dark), 10%);
-
-  &-flex {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 24px;
+  &--black {
+    background: url("../img/heading_01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &--white {
+    background: url("../img/heading_02.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
-  &__heading {
-    font-size: 1.1rem;
+  &--sm {
+    font-size: 1.2rem;
 
-    position: absolute;
-    top: -18px;
-    left: 40px;
+    height: 32px;
+    line-height: 32px;
+  }
+}
 
-    padding: 6px 12px;
+.desire-image {
+  width: 200px;
+}
 
-    border-radius: 8px;
-    background-color: bg-palette(main, dark);
-    box-shadow: 1px 1px 1px darken(bg-palette(main, dark), 10%);
+
+.access-wrap {
+  max-width: 450px;
+  margin: auto;
+  padding: 32px 64px;
+
+  border: solid 1px #707070;
+  border-radius: 30px;
+  background-color: #e9e3e3;
+
+  @include mq-down(xs) {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .heading {
+    margin-bottom: 24px;
+  }
+
+  hr {
+    margin: 24px 0;
+
+    background-color: #707070;
+  }
+}
+
+.access-map {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 32px;
+
+  img {
+    width: 100%;
   }
 }
 
 .btn {
-  width: 150px;
-  height: 50px;
+  font-size: 1.2rem;
 
-  transition: 0.3s;
+  display: block;
+
+  width: 80%;
+  height: 50px;
+  line-height: 50px;
+  margin: auto;
+
+  transition: 0.2s;
   text-align: center;
 
-  color: text-palette(primary);
-  border: 1px solid #9d9d9d;
-  border-radius: 8px;
-  box-shadow: 1px 1px 1px #b4b4b4;
-}
+  border: solid 1px #707070;
+  border-radius: 50px;
+  background-color: ui-palette(main);
 
-// Button Style Loop
-@each $var in "main", "primary", "secondary", "success", "info", "warn", "error" {
-  .btn-#{$var} {
-    background-color: ui-palette($var);
-    &:hover {
-      background-color: ui-palette($var, light);
-    }
-    &:active {
-      background-color: ui-palette($var, dark);
-    }
+  &:hover {
+    background-color: ui-palette(main, dark);
   }
 }
 
-.text {
-  margin: 24px 0;
-}
-
-// Text Style Loop
-@each $var in "main", "primary", "secondary", "success", "info", "warn", "error" {
-  .text-#{$var} {
-    color: text-palette($var);
-    &:hover {
-      color: text-palette($var, light);
-    }
-    &:active {
-      color: text-palette($var, dark);
-    }
-  }
-}
 
 @import "header";
 @import "footer";
 @import "burger-menu";
 @import "global-nav";
+@import "fv";
 @import "card";
