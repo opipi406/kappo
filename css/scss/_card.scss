@@ -3,81 +3,126 @@
 ------------------------------------------------------*/
 @import "media-query";
 @import "colors";
-// カード全体の高さ
-$card__root-height: 350px;
-// カード全体の横幅
-$card__root-width: 300px;
-// カード画像の高さ
-$card__image-height: 50%;
-// カード間の横余白
-$card__column-gap: 20px;
-// カード間の縦余白
-$card__row-gap: 20px;
 
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
+@mixin card-bg ($url) {
+  background: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mq-down(sm) {
+    background-position-x: -40px;
+  }
+  @include mq-down(xs) {
+    background-position-x: -80px;
+  }
 }
 
 .card {
-  // width: $card__root-width;
-  height: $card__root-height;
-  margin-right: $card__column-gap;
-  margin-bottom: $card__row-gap;
+  position: relative;
 
-  background-color: bg-palette(main, light);
-  box-shadow: 1px 1px 5px bg-palette(main, dark);
+  max-width: 450px;
+  margin: 0 auto 60px auto;
+  padding: 0.1px;
+  padding-left: 80px;
 
   @include mq-down(sm) {
-    width: 100%;
-    margin-right: 0;
-  }
-  @include mq-between(sm, md) {
-    width: calc(100% / 2 - #{$card__column-gap} / 2);
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-  @include mq-up(md) {
-    width: calc(100% / 3 - (#{$card__column-gap} * 2) / 3);
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    padding-left: 40px;
   }
 
+  * {
+    color: text-palette(main) !important;
+  }
+
+  &--spring {
+    @include card-bg("../img/card_spring.png");
+  }
+  &--summer {
+    @include card-bg("../img/card_summer.png");
+  }
+  &--autumn {
+    @include card-bg("../img/card_autumn.png");
+  }
+  &--winter {
+    @include card-bg("../img/card_winter.png");
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-right: 12px;
+
+    border-bottom: 2px solid text-palette(main, light);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 180px;
+    margin-right: 12px;
+    padding-top: 16px;
+    padding-bottom: 50px;
+
+    @include mq-down(sm) {
+      padding-right: 12px;
+    }
+    @include mq-down(xs) {
+      height: 300px;
+      padding-right: 0;
+    }
+  }
+}
+
+.card-content {
   &__image {
-    width: 100%;
-    height: $card__image-height;
+    height: 100%;
+    margin-right: 8px;
 
-    object-fit: cover;
-  }
-  &__title {
-    font-size: 1.4rem;
-    height: 3rem;
-
-    overflow: hidden;
-
-    margin: 8px;
-
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-
-    color: text-palette(primary);
+    @include mq-down(sm) {
+      height: 70%;
+    }
+    @include mq-down(xs) {
+      height: 80px;
+    }
   }
 
-  &__text {
-    font-size: 1rem;
+  &__body {
+    position: relative;
 
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
+    margin-bottom: auto;
+  }
+}
 
-    margin: 8px;
+.card-content-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    color: text-palette(main, light);
+  margin-top: auto;
 
-    -webkit-line-clamp: 5;
+  @include mq-down(xs) {
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-top: 40px;
+  }
+
+  &__btn {
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+
+    transition: 0.2s;
+    text-align: center;
+
+    border: 1px solid bg-palette(inverse, light);
+    background-color: ui-palette(main);
+
+    &:hover {
+      background-color: ui-palette(main, light);
+    }
   }
 }

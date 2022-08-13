@@ -6,30 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>テンプレートスタイル Demo</title>
+  <title>割烹 高橋 〜創業１４０年の歴史〜</title>
 
-  <!-- <link rel="shortcut icon" href="">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico"> -->
+  <!-- <link rel="icon" type="image/png" href="画像URL" sizes="16x16">
+  <link rel="icon" type="image/png" href="画像URL" sizes="32x32">
+  <link rel="icon" type="image/png" href="画像URL" sizes="48x48">
+  <link rel="icon" type="image/png" href="画像URL" sizes="62x62"> -->
 
   <meta name="msapplication-TileImage" content="/images/favicon.ico">
-  <meta name="description" content="ダミーテキスト">
-  <meta property="og:title" content="ダミーテキスト" />
-  <meta property="og:description" content="ダミーテキスト" />
-  <meta property="og:image" content="ダミーテキスト" />
+  <meta name="description" content="割烹 高橋 〜創業１４０年の歴史〜">
+  <meta property="og:title" content="割烹 高橋 〜創業１４０年の歴史〜">
+  <meta property="og:description" content="割烹 高橋 〜創業１４０年の歴史〜">
+  <meta property="og:image" content="http://opipi.main.jp/portfolio/kappo/img/fv.png">
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -39,142 +27,167 @@
   <link rel="stylesheet" href="css/destyle.min.css">
   <link rel="stylesheet" media="all" href="css/style.css">
 
-  <!-- JavaScript -->
-  <script src="js/burger-menu.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+  <div class="wrap">
 
-  <!-- Header -->
-  <header>
-    <div class="header">
-      <h1 class="header__title"><a href="#">Tamplate Style Demo</a></h1>
-      <span class="spacer"></span>
-      <nav class="header__nav">
-        <!-- Global Menu -->
-        <div class="menu-container">
-          <ul class="menu">
-            <li class="menu__item"><a href="#">Home</a></li>
-            <li class="menu__item"><a href="#button-sample">Button</a></li>
-            <li class="menu__item"><a href="#text-sample">Text</a></li>
-            <li class="menu__item"><a href="#card-content">Card</a></li>
-          </ul>
-        </div>
-        <!-- /Global Menu -->
-      </nav>
-      <button class="burger-menu">
-        <div class="burger-menu__btn">
-          <div class="burger-menu-line"></div>
-        </div>
-        <nav class="burger-menu__nav">
-          <!-- Global Menu (ハンバーガーメニュー) -->
-          <div class="menu-container">
-            <ul class="menu">
-              <li class="menu__item"><a href="#">Home</a></li>
-              <li class="menu__item"><a href="#button-sample">Button</a></li>
-              <li class="menu__item"><a href="#text-sample">Text</a></li>
-              <li class="menu__item"><a href="#card-content">Card</a></li>
-            </ul>
-          </div>
-          <!-- /Global Menu (ハンバーガーメニュー) -->
-        </nav>
-        <div class="burger-overlay"></div>
-      </button>
+    <ul class="leaf">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <!-- First View -->
+    <div class="fv">
+      <h1 class="fv__title">割烹 高橋</h1>
+      <p class="fv__title--sub">〜創業１４０年の歴史〜</p>
     </div>
-  </header>
-  <!-- /Header -->
 
-  <div class="container">
+    <section id="desire">
+      <div class="container">
 
-    <!-- Button Sample -->
-    <div class="panel panel-flex" id="button-sample">
-      <h2 class="panel__heading">Button Sample</h2>
-      <button class="btn btn-main">main</button>
-      <button class="btn btn-primary">primary</button>
-      <button class="btn btn-secondary">secondary</button>
-      <button class="btn btn-success">success</button>
-      <button class="btn btn-info">info</button>
-      <button class="btn btn-warn">warn</button>
-      <button class="btn btn-error">error</button>
-    </div>
-    <!-- /Button Sample -->
+        <h2 class="heading heading--black">創業の思い</h2>
 
-    <!-- Text Sample -->
-    <div class="panel" id="text-sample">
-      <h2 class="panel__heading">Text Sample</h2>
-      <p class="text text-main">
-        アリスは川辺でおねえさんのよこにすわって、なんにもすることがないのでとても退屈（たいくつ）しはじめていました。一、二回はおねえさんの読んでいる本をのぞいてみたけれど、そこには絵も会話もないのです。</p>
-      <p class="text text-primary">
-        「絵や会話のない本なんて、なんの役にもたたないじゃないの」とアリスは思いました。そこでアリスは、頭のなかで、ひなぎくのくさりをつくったら楽しいだろうけれど、起きあがってひなぎくをつむのもめんどくさいし、どうしようかと考えていました（といっても、昼間で暑いし、とってもねむくて頭もまわらなかったので、これもたいへんだったのですが）。そこへいきなり、ピンクの目をした白うさぎが近くを走ってきたのです。
-      </p>
-      <p class="text text-secondary">
-        それだけなら、そんなにめずらしいことでもありませんでした。さらにアリスとしては、そのうさぎが「どうしよう！　どうしよう！　ちこくしちゃうぞ！」とつぶやくのを聞いたときも、それがそんなにへんてこだとは思いませんでした。</p>
-      <p class="text text-success">
-        でもそのうさぎがほんとうに、チョッキのポケットから懐中時計（かいちゅうどけい）をとりだしてそれをながめ、そしてまたあわててかけだしたとき、アリスもとびあがりました。というのも、チョッキのポケットなんかがあるうさぎはこれまで見たことがないし、そこからとりだす時計をもっているうさぎなんかも見たことないぞ、というのに急に気がついたからです。そこで、興味（きょうみ）しんしんになったアリスは、うさぎのあとを追っかけて野原をよこぎって、それがしげみの下の、おっきなうさぎの穴にとびこむのを、ぎりぎりのところで見つけました。
-      </p>
-      <p class="text text-info">
-        次のしゅんかんに、アリスもそのあとを追っかけてとびこみました。いったいぜんたいどうやってそこから出ようか、なんてことはちっとも考えなかったのです。うさぎの穴は、しばらくはトンネルみたいにまっすぐつづいて、それからいきなりズドンと下におりていました。それがすごくいきなりで、アリスがとまろうとか思うひまもあればこそ、気がつくとなにやら深い井戸みたいなところを落っこちているところでした。
-      </p>
-      <p class="text text-warn">
-        井戸がとっても深かったのか、それともアリスの落ちかたがゆっくりだったのかもしれません。だってアリスは落ちながら、まわりを見まわして、これからどうなっちゃうんだろうと考えるだけの時間がたっぷりあったからです。まずは下をながめて、どこに向かおうとしているのかを見きわめようとしました。でも暗すぎてなにも見えません。
-      </p>
-      <p class="text text-error">それから井戸の横のかべを見てみました。するとそこは、食器だなと本だなだらけでした。あちこちに、地図や絵がとめ金に引っかけてあります。アリスは通りすがりに、たなの一つからびんを手にとってみました。「マーマレード」というラベルがはってあります。</p>
-    </div>
-    <!-- /Text Sample -->
+        <div id="js-scroll01" class="flex">
+          <img class="desire-image" src="img/circle_01.png" alt="創業140年の老舗">
+          <p class="desire-text">創業140年の老舗<br>江戸時代から続く割烹料理の名店<br>日本庭園より旬の食材を毎朝手摘み、こだわりぬいた調理方法で最高のおもてなしを届けます</p>
+        </div>
+        <div id="js-scroll02" class="flex flex--rv">
+          <img class="desire-image" src="img/circle_02.png" alt="創業140年の老舗">
+          <p class="desire-text">初代創業主高橋紀之による<br>和の美学を詰め込んだ料亭の風景、<br>秋には紅葉の紅葉、<br>夏には新緑といった季節を味わうことが出来ます</p>
+        </div>
 
-    <!-- Card Content -->
-    <div class="panel" id="card-content">
-      <h2 class="panel__heading">Card Content</h2>
-
-      <div class="card-list">
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
-        </div>
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
-        </div>
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。これは猫です。あああああああああてすとてすとテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
-        </div>
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトルダミータイトルダミータイトルダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
-        </div>
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
-        </div>
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
-        </div>
-        <div class="card">
-          <img class="card__image" src="img/card.jpg">
-          <h2 class="card__title">ダミータイトル</h2>
-          <p class="card__text">これは猫です。これは猫です。これは猫です。</p>
-        </div>
       </div>
+    </section>
 
-    </div>
-    <!-- /Card Content -->
+    <section id="course">
+      <div class="container">
+
+        <h2 class="heading heading--white">季節のコース</h2>
+
+        <div class="card card--spring">
+          <h3 class="card__heading">春の節</h3>
+          <div class="card__content card-content">
+            <img class="card-content__image" src="img/food_spring.png" alt="春の節">
+            <div class="card-content__body">
+              <p>春の食材を使用した<br>季節限定コース</p>
+              <p class="small">※アレルギーがある方は<br class="sp">事前にお申し出ください</p>
+              <div class="spacer"></div>
+              <div class="card-content-footer">
+                <p class="card-content-footer__price">一人:13,000円</p>
+                <a class="card-content-footer__btn" href="">予約</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--summer">
+          <h3 class="card__heading">夏の節</h3>
+          <div class="card__content card-content">
+            <img class="card-content__image" src="img/food_summer.png" alt="夏の節">
+            <div class="card-content__body">
+              <p>夏の食材を使用した<br>季節限定コース</p>
+              <p class="small">※アレルギーがある方は<br class="sp">事前にお申し出ください</p>
+              <div class="card-content-footer">
+                <p class="card-content-footer__price">一人:13,000円</p>
+                <a class="card-content-footer__btn" href="">予約</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--autumn">
+          <h3 class="card__heading">秋の節</h3>
+          <div class="card__content card-content">
+            <img class="card-content__image" src="img/food_autumn.png" alt="秋の節">
+            <div class="card-content__body">
+              <p>秋の食材を使用した<br>季節限定コース</p>
+              <p class="small">※アレルギーがある方は<br class="sp">事前にお申し出ください</p>
+              <div class="card-content-footer">
+                <p class="card-content-footer__price">一人:13,000円</p>
+                <a class="card-content-footer__btn" href="">予約</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--winter">
+          <h3 class="card__heading">冬の節</h3>
+          <div class="card__content card-content">
+            <img class="card-content__image" src="img/food_winter.png" alt="冬の節">
+            <div class="card-content__body">
+              <p>冬の食材を使用した<br>季節限定コース</p>
+              <p class="small">※アレルギーがある方は<br class="sp">事前にお申し出ください</p>
+              <div class="card-content-footer">
+                <p class="card-content-footer__price">一人:13,000円</p>
+                <a class="card-content-footer__btn" href="">予約</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="access">
+      <div class="container">
+
+        <div class="access-wrap">
+          <h2 class="heading heading--black">アクセス</h2>
+          <p>
+            公共機関:<br>
+            葛城駅前バス停～轟山入口<br>
+            バス停より徒歩3分
+          </p>
+          <hr>
+          <p>
+            お車でお越しの方へ:<br>
+            葛城IC～県道272号狸山方面
+          </p>
+          <hr>
+          <p>
+            ハイヤー手配:<br>
+            葛城駅前にお迎えに上がります<br>
+            ご予約ページからお願い致します
+          </p>
+          <hr>
+
+          <h2 class="heading heading--black heading--sm">地図</h2>
+          <div class="access-map">
+            <img src="img/access.png" alt="アクセスマップ">
+          </div>
+
+          <a class="btn" href="#">予約フォーム</a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p id="copyright">&copy; opipi. 2022.</p>
+    </footer>
+    <!-- /Footer -->
 
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p id="copyright">&copy; opipi. 2022.</p> 
-  </footer>
-  <!-- /Footer -->
-
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script src="js/bundle.js"></script>
+  <!-- <script src="js/dev/anim.js"></script> -->
 </body>
 
 </html>
