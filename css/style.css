@@ -9,7 +9,7 @@
   背景パレット
 ------------------------------------------------------*/
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Klee One", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 100%;
   line-height: 1.8;
   color: #0d0d0d;
@@ -31,6 +31,10 @@ html {
   .sp {
     display: none;
   }
+}
+
+p.small {
+  font-size: 0.5rem;
 }
 
 .flex {
@@ -259,189 +263,6 @@ footer {
 }
 
 /*-----------------------------------------------------
-  ハンバーガーメニュー
-------------------------------------------------------*/
-/*-----------------------------------------------------
-  テキストパレット
-------------------------------------------------------*/
-/*-----------------------------------------------------
-  UIパレット
-------------------------------------------------------*/
-/*-----------------------------------------------------
-  背景パレット
-------------------------------------------------------*/
-.burger-menu {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  height: 32px;
-}
-.burger-menu__btn {
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-}
-.burger-menu span {
-  margin-left: 10px;
-}
-.burger-menu.open span {
-  color: #f2f2f2 !important;
-}
-.burger-menu__nav {
-  position: fixed;
-  overflow-y: scroll;
-  width: 400px;
-  height: 100vh;
-  cursor: default;
-  transition: all 0.3s;
-  opacity: 0;
-  background-color: #262626;
-  inset: 0 0 0 100vw;
-}
-.burger-menu__nav.open {
-  z-index: 99;
-  opacity: 1;
-}
-@media screen and (min-width: 560px) {
-  .burger-menu__nav.open {
-    width: 400px;
-    inset: 0 0 0 calc(100vw - 400px);
-  }
-}
-@media screen and (max-width: 559px) {
-  .burger-menu__nav.open {
-    width: 100vw;
-    inset: 0;
-  }
-}
-
-/*-----------------------------------------------------
-  ハンバーガーメニューのボタンアイコン
-------------------------------------------------------*/
-.burger-menu-line {
-  position: relative;
-  z-index: 100;
-  display: inline-block;
-  width: 32px;
-  height: 3px;
-  transition: 0.15s cubic-bezier(0.33, 1, 0.68, 1);
-  background-color: #f2f2f2;
-}
-.burger-menu-line::before, .burger-menu-line::after {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  transition: 0.3s cubic-bezier(0.33, 1, 0.68, 1);
-  background-color: #f2f2f2;
-}
-.burger-menu-line::before {
-  transform: translateY(-10.6666666667px);
-}
-.burger-menu-line::after {
-  transform: translateY(10.6666666667px);
-}
-.burger-menu-line.open {
-  background-color: transparent !important;
-}
-.burger-menu-line.open::before {
-  transform: rotate(-45deg);
-  background-color: #f2f2f2 !important;
-}
-.burger-menu-line.open::after {
-  transform: rotate(45deg);
-  background-color: #f2f2f2 !important;
-}
-
-/*-----------------------------------------------------
-  オーバーレイ
-------------------------------------------------------*/
-.burger-overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  transition: all 0.3s;
-  pointer-events: none;
-  background: transparent;
-  inset: 0;
-}
-.burger-overlay.open {
-  z-index: 90;
-  cursor: default;
-  pointer-events: all;
-  background-color: rgba(0, 0, 0, 0.2509803922);
-}
-
-body.open {
-  overflow: hidden !important;
-}
-
-/*-----------------------------------------------------
-  Global Navigation (Header Menu)
-------------------------------------------------------*/
-/*-----------------------------------------------------
-  テキストパレット
-------------------------------------------------------*/
-/*-----------------------------------------------------
-  UIパレット
-------------------------------------------------------*/
-/*-----------------------------------------------------
-  背景パレット
-------------------------------------------------------*/
-.header__nav .menu {
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.header__nav .menu > .menu__item {
-  position: relative;
-}
-.header__nav .menu > .menu__item > a {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.8;
-  cursor: pointer;
-  transition: all 0.3s;
-  color: #f1f1f1;
-}
-.header__nav .menu > .menu__item > a:hover {
-  color: #e663ac;
-}
-.header__nav .menu > * + * {
-  margin-left: 16px;
-}
-
-.burger-menu__nav .menu {
-  padding: 80px 24px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.burger-menu__nav .menu > .menu__item {
-  position: relative;
-  margin-bottom: 18px;
-}
-.burger-menu__nav .menu > .menu__item > a {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.8;
-  cursor: pointer;
-  transition: all 0.3s;
-  color: #f1f1f1;
-}
-.burger-menu__nav .menu > .menu__item > a:hover {
-  color: #e663ac;
-}
-
-/*-----------------------------------------------------
   First View
 ------------------------------------------------------*/
 /*-----------------------------------------------------
@@ -628,9 +449,6 @@ body.open {
   position: relative;
   margin-bottom: auto;
 }
-.card-content small {
-  font-size: 0.5rem;
-}
 
 .card-content-footer {
   display: flex;
@@ -656,4 +474,175 @@ body.open {
 }
 .card-content-footer__btn:hover {
   background-color: white;
+}
+
+.leaf {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.leaf li {
+  position: absolute;
+  top: -50px;
+  list-style: none;
+  border-radius: 0 70%;
+  background: #ff7e47;
+}
+
+@-webkit-keyframes fall {
+  to {
+    top: 120%;
+    opacity: 0;
+  }
+}
+
+@keyframes fall {
+  to {
+    top: 120%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes sway1 {
+  from {
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    transform: translateX(200px) rotate(-45deg);
+  }
+}
+@keyframes sway1 {
+  from {
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    transform: translateX(200px) rotate(-45deg);
+  }
+}
+@-webkit-keyframes sway2 {
+  from {
+    transform: translateX(200px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+@keyframes sway2 {
+  from {
+    transform: translateX(200px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+.leaf li:nth-child(1) {
+  top: -60px;
+  left: 0;
+  width: 24px;
+  height: 15px;
+  -webkit-animation: fall 10s linear infinite, sway1 3s ease-in-out infinite alternate;
+          animation: fall 10s linear infinite, sway1 3s ease-in-out infinite alternate;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  background-color: #ffbf00;
+}
+
+.leaf li:nth-child(2) {
+  top: -70px;
+  left: 5%;
+  width: 13px;
+  height: 9px;
+  -webkit-animation: fall 15s linear infinite, sway1 2s ease-in-out infinite alternate;
+          animation: fall 15s linear infinite, sway1 2s ease-in-out infinite alternate;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  background-color: #009926;
+}
+
+.leaf li:nth-child(3) {
+  top: -50px;
+  left: 15%;
+  width: 16px;
+  height: 10px;
+  -webkit-animation: fall 9s linear infinite, sway1 3.5s ease-in-out infinite alternate;
+          animation: fall 9s linear infinite, sway1 3.5s ease-in-out infinite alternate;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+  background-color: #c2704e;
+}
+
+.leaf li:nth-child(4) {
+  top: -70px;
+  left: 30%;
+  width: 16px;
+  height: 10px;
+  -webkit-animation: fall 8s linear infinite, sway2 4s ease-in-out infinite alternate;
+          animation: fall 8s linear infinite, sway2 4s ease-in-out infinite alternate;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+  background-color: #ffbb00;
+}
+
+.leaf li:nth-child(5) {
+  top: -60px;
+  left: 40%;
+  width: 16px;
+  height: 10px;
+  -webkit-animation: fall 10s linear infinite, sway1 4s ease-in-out infinite alternate;
+          animation: fall 10s linear infinite, sway1 4s ease-in-out infinite alternate;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.leaf li:nth-child(6) {
+  top: -50px;
+  left: 55%;
+  width: 24px;
+  height: 15px;
+  -webkit-animation: fall 11s linear infinite, sway2 3s ease-in-out infinite alternate;
+          animation: fall 11s linear infinite, sway2 3s ease-in-out infinite alternate;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  background-color: #993b00;
+}
+
+.leaf li:nth-child(7) {
+  top: -40px;
+  left: 65%;
+  width: 16px;
+  height: 10px;
+  -webkit-animation: fall 7s linear infinite, sway2 3.5s ease-in-out infinite alternate;
+          animation: fall 7s linear infinite, sway2 3.5s ease-in-out infinite alternate;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.leaf li:nth-child(8) {
+  top: -60px;
+  left: 50%;
+  width: 13px;
+  height: 9px;
+  -webkit-animation: fall 7s linear infinite, sway1 3s ease-in-out infinite alternate;
+          animation: fall 7s linear infinite, sway1 3s ease-in-out infinite alternate;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  background-color: #c2704e;
+}
+
+.leaf li:nth-child(9) {
+  top: -70px;
+  left: 80%;
+  width: 16px;
+  height: 10px;
+  -webkit-animation: fall 10s linear infinite, sway2 4s ease-in-out infinite alternate;
+          animation: fall 10s linear infinite, sway2 4s ease-in-out infinite alternate;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
