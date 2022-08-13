@@ -5,7 +5,7 @@ https://opipi.main.jp/portfolio/kappo/
 
 # Installation
 ```bash
-git clone https://github.com/opipi406/kappo.git
+git clone https://github.com/opipi406/lp-kappo.git
 ```
 
 # Note
