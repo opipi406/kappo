@@ -34,16 +34,16 @@
   }
 
   &--spring {
-    @include card-bg("../img/card_spring.png");
+    @include card-bg("../img/card_spring.jpg");
   }
   &--summer {
-    @include card-bg("../img/card_summer.png");
+    @include card-bg("../img/card_summer.jpg");
   }
   &--autumn {
-    @include card-bg("../img/card_autumn.png");
+    @include card-bg("../img/card_autumn.jpg");
   }
   &--winter {
-    @include card-bg("../img/card_winter.png");
+    @include card-bg("../img/card_winter.jpg");
   }
 
   &__heading {
